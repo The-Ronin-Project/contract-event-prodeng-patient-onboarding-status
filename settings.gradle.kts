@@ -1,4 +1,4 @@
-rootProject.name = "ronin-contract-event-template"
+rootProject.name = "ronin-contract-event-prodeng-patient-onboarding-status"
 
 pluginManagement {
     repositories {
