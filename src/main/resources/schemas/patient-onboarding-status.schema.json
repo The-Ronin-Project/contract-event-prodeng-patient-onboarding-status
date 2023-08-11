@@ -1,0 +1,34 @@
+{
+  "$id": "https://github.com/projectronin/contract-event-prodeng-patient-onboarding-status/blob/main/v1/contract-event-prodeng-patient-onboarding-status-v1.schema.json",
+  "title": "Patient Onboarding Status Schema",
+  "description": "Schema describing an event sent when a patient onboards or offboards",
+  "type": "object",
+  "properties": {
+    "patientId": {
+      "description": "The ID of the patient, aka UDP ID",
+      "type": "string"
+    },
+    "tenantId": {
+      "description": "The ID of the tenant",
+      "type": "string"
+    },
+    "action": {
+      "description": "Whether the event is the result of onboarding or offboarding",
+      "enum": [
+        "ONBOARD",
+        "OFFBOARD"
+      ]
+    },
+    "actionTimestamp": {
+      "description": "Date/time of the onboarding or offboarding event",
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "patientId",
+    "tenantId",
+    "action",
+    "actionTimestamp"
+  ]
+}
